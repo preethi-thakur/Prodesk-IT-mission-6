@@ -11,28 +11,26 @@ export default function Contact() {
       Contact ShopZone
     </h2>
 
-    {/* Name Input */}
     <input
       type="text"
       placeholder="Enter your name"
       className="w-full px-5 py-3 rounded-xl bg-white/40 text-[#5B2E1F] placeholder-[#7a5a50] outline-none border border-white/30 focus:ring-2 focus:ring-[#FF8A65]"
     />
 
-    {/* Email Input */}
     <input
       type="email"
       placeholder="Enter your email"
       className="w-full px-5 py-3 rounded-xl bg-white/40 text-[#5B2E1F] placeholder-[#7a5a50] outline-none border border-white/30 focus:ring-2 focus:ring-[#FF8A65]"
     />
 
-    {/* Message */}
+  
     <textarea
       rows="5"
       placeholder="Write your message..."
       className="w-full px-5 py-3 rounded-xl bg-white/40 text-[#5B2E1F] placeholder-[#7a5a50] outline-none border border-white/30 focus:ring-2 focus:ring-[#FF8A65]"
     ></textarea>
 
-    {/* Button */}
+    
     <button
       className="w-full bg-[#FF8A65] hover:bg-[#ff7043] text-white py-3 rounded-xl text-lg font-semibold transition duration-300 shadow-md"
     >
