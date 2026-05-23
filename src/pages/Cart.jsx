@@ -16,9 +16,9 @@ export default function Cart() {
         Cart Items
       </h1>
 
-      {cart.map((item, index) => (
+      {cart.map((item) => (
         <div
-          key={`${item.id}-${index}`}
+          key={item.cartItemId}
           className="border p-4 mb-3 flex flex-col md:flex-row gap-4 rounded-3xl items-start"
         >
           {item.thumbnail && (
@@ -30,25 +30,19 @@ export default function Cart() {
           )}
 
           <div className="flex-1">
-            <h2 className="text-xl font-semibold">
-              {item.title}
-            </h2>
+            <h2 className="text-xl font-semibold">{item.title}</h2>
             <p className="mt-2 text-lg">${item.price}</p>
             <button
-              onClick={() => removeFromCart(index)}
+              onClick={() => removeFromCart(item.cartItemId)}
               className="mt-3 bg-orange-600 text-white px-4 py-2 rounded"
             >
               Remove
             </button>
-            
-              
           </div>
-          
         </div>
       ))}
-
       <h2 className="text-2xl font-bold mt-6 mb-6">
-        Total: ${total} <br />
+        Total: ${total} 
 
       </h2>
        {cart.length > 0 && (
