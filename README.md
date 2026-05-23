@@ -96,4 +96,4 @@ ShopZone provides a clean and stylish shopping experience with modern UI/UX desi
 
 ##  Author
 
-Preethi Thaku
+Preethi Thakur. 
