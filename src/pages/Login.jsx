@@ -8,7 +8,7 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  // Redirect if already logged in
+
   useEffect(() => {
 
     if (isLoggedIn) {
