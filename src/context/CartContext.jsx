@@ -13,13 +13,20 @@ export default function CartProvider({ children }) {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  function addToCart(product) {
-    setCart([...cart, product]);
-  }
+  const addToCart = (product) => {
+      const newItem = {
+        ...product,
+        cartItemId: Date.now() + Math.random(),
+      };
+  
+      setCart((prev) => [...prev, newItem]);
+    };
 
-  function removeFromCart(index) {
-    setCart((prevCart) => prevCart.filter((_, i) => i !== index));
-  }
+    const removeFromCart = (cartItemId) => {
+      setCart((prev) =>
+        prev.filter((item) => item.cartItemId !== cartItemId)
+      );
+    };
 
   return (
     <CartContext.Provider
